@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="น้ำเกลือแร่ผลิตเอง สั่งออนไลน์ผ่าน Facebook และ TikTok ส่งถึงมือด้วยรถของร้าน">
+<meta property="og:title" content="น้ำเกลือแร่ออนไลน์">
+<meta property="og:description" content="น้ำเกลือแร่ผลิตเอง สั่งออนไลน์ ส่งถึงมือคุณ พร้อมข้อมูลการเงินปี 2566–2567">
+<meta property="og:type" content="website">
+<style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
+<title>น้ำเกลือแร่ออนไลน์</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: quiet single column of bands; one bold element = the finance panel set like a drink's nutrition label */
+:root{
+  --bg:#F5F8F7; --surface:#FFFFFF; --ink:#12262A; --muted:#566A6D; --line:#D7E0DE; --soft:#E9F0EE;
+  --accent:#008A79; --accent-ink:#006A5D; --on-accent:#FFFFFF;
+  --y66:#C98226; --y67:#008A79; --neg:#B3261E;
+  --sans:"IBM Plex Sans Thai",Tahoma,"Leelawadee UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111819; --surface:#182224; --ink:#E4ECEA; --muted:#93A4A6; --line:#2B393B; --soft:#1E2A2C;
+  --accent:#1E9E8E; --accent-ink:#5CC7B8; --on-accent:#06201C;
+  --y66:#C27F2D; --y67:#1E9E8E; --neg:#F08A80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111819; --surface:#182224; --ink:#E4ECEA; --muted:#93A4A6; --line:#2B393B; --soft:#1E2A2C;
+  --accent:#1E9E8E; --accent-ink:#5CC7B8; --on-accent:#06201C;
+  --y66:#C27F2D; --y67:#1E9E8E; --neg:#F08A80; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.3}
+p{margin:0}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-weight:700;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.drop{width:14px;height:18px;flex:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+nav a{text-decoration:none;color:var(--muted);font-size:15px}
+nav a:hover{color:var(--ink)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);font:inherit;font-size:14px;padding:4px 12px;border-radius:6px;cursor:pointer}
+
+/* hero */
+.hero{padding-block:72px 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end}
+.hero h1{font-size:clamp(34px,5.2vw,56px);font-weight:700;letter-spacing:-.01em;margin-top:14px}
+.hero p.lead{margin-top:20px;max-width:34em;color:var(--muted);font-size:18px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:11px 22px;border-radius:6px;text-decoration:none;font-weight:600;font-size:15px}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{background:var(--accent-ink)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--ink)}
+.steps{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.steps .n{font-family:var(--mono);font-size:13px;color:var(--accent-ink);padding-top:3px}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted);font-size:14px}
+
+/* sections */
+section{padding-block:72px;border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head h2{font-size:clamp(26px,3.4vw,36px);font-weight:700;margin-top:8px}
+.head p{color:var(--muted);max-width:30em}
+
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.three div{min-width:0}
+.three h3{font-size:20px;font-weight:600;margin-bottom:8px}
+.three p{color:var(--muted);font-size:15px}
+.three .tag{font-family:var(--mono);font-size:12px;color:var(--accent-ink);display:block;margin-bottom:14px;padding-top:14px;border-top:1px solid var(--ink)}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about p+p{margin-top:16px}
+.about .copy p{color:var(--muted);max-width:34em}
+.res{list-style:none;margin:0;padding:0}
+.res li{display:flex;justify-content:space-between;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
+.res li:first-child{border-top:1px solid var(--line)}
+.res .v{font-family:var(--mono);font-size:15px}
+
+/* finance */
+.fin{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:start}
+.fin>*{min-width:0}
+.facts{background:var(--surface);border:2px solid var(--ink);padding:14px 16px 16px}
+.facts h3{font-size:28px;font-weight:700;line-height:1.1}
+.facts .sub{font-size:13px;color:var(--muted);padding-bottom:8px;border-bottom:1px solid var(--ink)}
+.facts .big{display:flex;justify-content:space-between;align-items:baseline;border-bottom:7px solid var(--ink);padding-block:6px}
+.facts .big b{font-size:15px}
+.facts .big .v{font-family:var(--mono);font-size:20px;font-weight:500}
+.facts .row{display:flex;justify-content:space-between;gap:10px;padding-block:5px;border-bottom:1px solid var(--line);font-size:14px}
+.facts .row .v{font-family:var(--mono);font-size:13px}
+.facts .row.th{border-bottom:3px solid var(--ink);font-size:12px;color:var(--muted)}
+.facts .row.ind{padding-left:14px}
+.facts .total{display:flex;justify-content:space-between;padding-top:8px;margin-top:2px;border-top:4px solid var(--ink);font-weight:700}
+.facts .note{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5}
+.down{color:var(--neg)}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.tabs button{font:inherit;font-size:14px;background:none;border:1px solid var(--line);color:var(--muted);padding:5px 12px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart svg text{font-family:var(--sans)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.5;padding:7px 10px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-110%)}
+.tbl{overflow-x:auto;margin-top:24px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;border-bottom:2px solid var(--ink);font-size:13px}
+td.m{font-family:var(--mono);font-size:13px}
+tr.sum td{font-weight:700;border-bottom:none;border-top:2px solid var(--ink)}
+.formula{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* cta + footer */
+.cta{background:var(--ink);color:var(--bg);border-top:none}
+.cta .in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{font-size:clamp(24px,3vw,32px)}
+.cta p{opacity:.75;margin-top:6px}
+.cta .chan{font-family:var(--mono);font-size:15px;display:flex;gap:10px;flex-wrap:wrap}
+.cta .chan span{border:1px solid currentColor;padding:6px 14px;border-radius:6px}
+footer{padding-block:40px;font-size:14px;color:var(--muted)}
+footer .in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero,.about,.fin{grid-template-columns:1fr}
+  .hero{padding-block:48px;gap:40px}
+  .three{grid-template-columns:1fr;gap:28px}
+  .menu-btn{display:block}
+  nav{display:none;width:100%}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding-bottom:8px}
+  nav li a{display:block;padding:10px 0;border-top:1px solid var(--line)}
+  .bar{flex-wrap:wrap}
+  section{padding-block:56px}
+}
+@media (prefers-reduced-motion:no-preference){ .chart rect.b{transition:width .35s ease} }
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg class="drop" viewBox="0 0 14 18" aria-hidden="true"><path d="M7 0C7 0 0 8 0 11.5A7 7 0 0 0 14 11.5C14 8 7 0 7 0Z" style="fill:var(--accent)"/></svg>
+      น้ำเกลือแร่ออนไลน์
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">เมนู</button>
+    <nav id="nav" aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="#what">สินค้าและบริการ</a></li>
+        <li><a href="#about">เกี่ยวกับเรา</a></li>
+        <li><a href="#finance">ข้อมูลการเงิน</a></li>
+        <li><a href="#contact">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <span class="label">Electrolyte drink · สั่งออนไลน์</span>
+      <h1>น้ำเกลือแร่ที่ผลิตเอง และส่งถึงมือคุณเอง</h1>
+      <p class="lead">เราผลิตน้ำเกลือแร่ในโรงงานของร้าน บรรจุขวดเอง รับออร์เดอร์ผ่าน Facebook และ TikTok แล้วจัดส่งด้วยรถของร้าน ทุกขั้นตอนอยู่ในมือเราตั้งแต่ต้นจนจบ</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">สั่งซื้อสินค้า</a>
+        <a class="btn ghost" href="#finance">ดูข้อมูลการเงิน</a>
+      </div>
+    </div>
+    <ol class="steps" aria-label="ขั้นตอนจากโรงงานถึงลูกค้า">
+      <li><span class="n">01</span><div><b>ผลิต</b><span>เครื่องจักรผลิตน้ำเกลือแร่ในโรงงานของร้าน</span></div></li>
+      <li><span class="n">02</span><div><b>บรรจุ</b><span>บรรจุลงขวดและเก็บเป็นสินค้าพร้อมขาย</span></div></li>
+      <li><span class="n">03</span><div><b>รับออร์เดอร์</b><span>ลูกค้าสั่งผ่านเพจ Facebook และ TikTok</span></div></li>
+      <li><span class="n">04</span><div><b>จัดส่ง</b><span>รถของร้านนำสินค้าไปส่งถึงลูกค้า</span></div></li>
+    </ol>
+  </div>
+
+  <section id="what">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="label">What we do</span><h2>สินค้าและบริการ</h2></div>
+        <p>ธุรกิจเดียวที่ครบทั้งการผลิต การขาย และการขนส่ง</p>
+      </div>
+      <div class="three">
+        <div><span class="tag">การผลิต</span><h3>ผลิตในโรงงานของร้าน</h3><p>ใช้เครื่องจักรผลิตน้ำเกลือแร่และอุปกรณ์การผลิตของร้านเอง จึงควบคุมคุณภาพและปริมาณการผลิตได้</p></div>
+        <div><span class="tag">ช่องทางขาย</span><h3>ขายออนไลน์</h3><p>ประชาสัมพันธ์และรับคำสั่งซื้อผ่าน Facebook และ TikTok ลูกค้าสั่งได้จากมือถือโดยไม่ต้องมาที่ร้าน</p></div>
+        <div><span class="tag">การจัดส่ง</span><h3>ส่งด้วยรถของร้าน</h3><p>มียานพาหนะสำหรับส่งสินค้าเป็นของตัวเอง ไม่ต้องพึ่งบริษัทขนส่งภายนอกในพื้นที่ที่ร้านให้บริการ</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="copy">
+        <span class="label">About us</span>
+        <h2 style="font-size:clamp(26px,3.4vw,36px);margin:8px 0 20px">ธุรกิจน้ำเกลือแร่ที่วางโมเดลด้วย Business Model Canvas</h2>
+        <p>เว็บไซต์นี้จัดทำจากกรณีศึกษา Business Model Canvas ของธุรกิจน้ำเกลือแร่ออนไลน์ แสดงว่าธุรกิจสร้างและส่งมอบสินค้าอย่างไร และใช้ทรัพยากรอะไรบ้าง</p>
+        <p>ทรัพยากรหลักของธุรกิจคือโรงงาน เครื่องจักร และรถส่งสินค้า ซึ่งรวมกันคิดเป็นสัดส่วนใหญ่ที่สุดของสินทรัพย์ทั้งหมด</p>
+      </div>
+      <div>
+        <span class="label">ทรัพยากรหลัก · ยอดปี 2567 (บาท)</span>
+        <ul class="res" style="margin-top:14px">
+          <li><span>อาคาร / โรงงาน</span><span class="v num">2,500,000</span></li>
+          <li><span>เครื่องจักรผลิตน้ำเกลือแร่</span><span class="v num">850,000</span></li>
+          <li><span>ยานพาหนะส่งสินค้า</span><span class="v num">550,000</span></li>
+          <li><span>อุปกรณ์การผลิต</span><span class="v num">120,000</span></li>
+          <li><span>ระบบจัดการธุรกิจ</span><span class="v num">80,000</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="finance">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="label">Financial snapshot</span><h2>ข้อมูลทางการเงิน</h2></div>
+        <p>งบแสดงฐานะการเงินเปรียบเทียบ ปี 2566 กับปี 2567 หน่วยเป็นบาท</p>
+      </div>
+      <div class="fin">
+        <div class="facts" aria-label="สรุปสินทรัพย์">
+          <h3>ข้อมูลสินทรัพย์</h3>
+          <div class="sub">ต่อ 1 ปีบัญชี · หน่วย: บาท</div>
+          <div class="big"><b>รวมสินทรัพย์ 2567</b><span class="v num">5,391,945.20</span></div>
+          <div class="row th"><span>หมวด</span><span>% ของทั้งหมด</span></div>
+          <div id="factRows"></div>
+          <div class="total"><span>เทียบกับปี 2566</span><span class="num down">−23.07%</span></div>
+          <div class="note">ปี 2566 มีสินทรัพย์รวม 7,008,825.50 บาท ลดลง 1,616,880.30 บาท</div>
+        </div>
+
+        <div>
+          <div class="tabs" role="tablist" id="tabs"></div>
+          <div class="legend"><span><i style="background:var(--y66)"></i>ปี 2566</span><span><i style="background:var(--y67)"></i>ปี 2567</span></div>
+          <div class="chart" id="chart"><div class="tip" id="tip" hidden></div></div>
+          <div class="tbl"><table id="tbl"></table></div>
+          <p class="formula">ผลต่าง(%) = (ปี 2567 − ปี 2566) ÷ ปี 2566 · ตัวเลขสีแดงคือรายการที่ลดลงจากปีก่อน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap in">
+      <div><h2>สั่งน้ำเกลือแร่ได้ทางเพจของร้าน</h2><p>ทักแชตเพื่อสั่งซื้อหรือสอบถามพื้นที่จัดส่ง</p></div>
+      <div class="chan"><span>Facebook</span><span>TikTok</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap in">
+    <span>© 2026 น้ำเกลือแร่ออนไลน์ · เว็บไซต์ต้นแบบจากกรณีศึกษา Business Model Canvas</span>
+    <span>ข้อมูลการเงินจากโปสเตอร์ของกลุ่ม</span>
+  </div>
+</footer>
+
+<script>
+const DATA=[
+ {k:"สินทรัพย์หมุนเวียน",d:0,rows:[["เงินสดและรายการเทียบเท่าเงินสด",450000,200000],["สินค้าคงเหลือ (ขวดน้ำ-น้ำผลิต)",350000,180000],["เงินฝากธนาคาร (เงินทุน)",1200000,500000],["ลูกหนี้การค้า",280000,120000],["บรรจุภัณฑ์คงเหลือ (ขวดเปล่า)",45000,25000],["ค่าใช้จ่ายล่วงหน้า",30000,15000],["เงินลงทุนระยะสั้น",200000,100000]]},
+ {k:"สินทรัพย์ไม่หมุนเวียน",d:0,rows:[["อุปกรณ์การผลิต",180000,120000],["เครื่องจักรผลิตน้ำเกลือแร่",850000,850000],["ยานพาหนะส่งสินค้า",550000,550000],["อาคาร/โรงงาน",2500000,2500000],["อุปกรณ์สำนักงาน",95000,60000],["ระบบจัดการธุรกิจ",120000,80000]]},
+ {k:"สินทรัพย์ทางภาษี",d:0,rows:[["ภาษีซื้อรอเครดิต",35000,18000],["ภาษีเงินได้หัก ณ ที่จ่ายรอขอคืน",22000,12000],["ภาษีเงินได้นิติบุคคลจ่ายล่วงหน้า",40000,25000],["สินทรัพย์ภาษีเงินได้รอการตัดบัญชี",15000,10000]]},
+ {k:"ค่าโปรแกรม",d:0,rows:[["Excel",4500,4500],["GPT",8400,4200],["Facebook",18000,12000],["TikTok",12000,5000]]},
+ {k:"ค่าบัญชีจากระบบ",d:2,rows:[["ส่วนต่างจากการปัดเศษ",125.5,45.2],["ส่วนต่างอัตราแลกเปลี่ยนชั่วคราว",3800,1200]]},
+];
+const sum=(r,i)=>r.reduce((s,x)=>s+x[i],0);
+DATA.push({k:"สรุปรวม",d:2,rows:DATA.map(s=>["รวม"+s.k,sum(s.rows,1),sum(s.rows,2)])});
+const fmt=(v,d)=>v.toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=(a,b)=>a===0?0:(b-a)/a;
+const pf=p=>{p=Math.abs(p)<1e-12?0:p;return (p<0?"−":p>0?"+":"")+Math.abs(p*100).toFixed(2)+"%"};
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+// facts panel
+const grand=sum(DATA.at(-1).rows,2);
+document.getElementById("factRows").innerHTML=DATA.slice(0,-1).map(s=>{
+  const t=sum(s.rows,2);return `<div class="row ind"><span>${esc(s.k)}</span><span class="v num">${(t/grand*100).toFixed(2)}%</span></div>`}).join("");
+
+const tabs=document.getElementById("tabs"),chart=document.getElementById("chart"),tip=document.getElementById("tip"),tbl=document.getElementById("tbl");
+let cur=0;
+function niceMax(v){const e=Math.pow(10,Math.floor(Math.log10(v)));for(const m of [1,2,2.5,5,10]){if(m*e>=v)return m*e}return 10*e}
+function draw(){
+  const s=DATA[cur],d=s.d,rows=s.rows.concat([[s.k==="สรุปรวม"?"รวมสินทรัพย์ทั้งหมด":"รวม"+s.k,sum(s.rows,1),sum(s.rows,2)]]);
+  const W=chart.clientWidth||640,narrow=W<520,LBL=narrow?0:220,RP=64,bh=11,gap=2,band=narrow?64:46;
+  const H=rows.length*band+28,max=niceMax(Math.max(...rows.flatMap(r=>[r[1],r[2]])));
+  const x=v=>(W-LBL-RP)*v/max;
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="กราฟเปรียบเทียบ ${esc(s.k)} ปี 2566 และ 2567">`;
+  for(let i=0;i<=4;i++){const v=max*i/4,xx=LBL+x(v);
+    g+=`<line x1="${xx}" y1="0" x2="${xx}" y2="${H-24}" style="stroke:var(--line)" stroke-width="1"/>`;
+    g+=`<text x="${xx}" y="${H-6}" font-size="11" text-anchor="${i===0?"start":i===4?"end":"middle"}" style="font-family:var(--mono);fill:var(--muted)">${v>=1e6?(v/1e6)+"M":v>=1e3?(v/1e3)+"k":v}</text>`}
+  rows.forEach((r,i)=>{
+    const top=i*band+(narrow?22:(band-2*bh-gap)/2),isT=i===rows.length-1;
+    if(narrow)g+=`<text x="0" y="${i*band+15}" font-size="13" style="fill:var(--ink)" font-weight="${isT?700:400}">${esc(r[0])}</text>`;
+    else g+=`<text x="${LBL-12}" y="${top+bh+4}" font-size="13" text-anchor="end" style="fill:var(--ink)" font-weight="${isT?700:400}">${esc(r[0])}</text>`;
+    [[1,"var(--y66)",top],[2,"var(--y67)",top+bh+gap]].forEach(([k,c,y])=>{
+      const w=Math.max(x(r[k]),r[k]>0?2:0);
+      g+=`<rect class="b" x="${LBL}" y="${y}" width="${w}" height="${bh}" rx="2" style="fill:${c}"/>`;
+      g+=`<text x="${LBL+w+6}" y="${y+bh-1}" font-size="11" style="font-family:var(--mono);fill:var(--muted)">${fmt(r[k],d)}</text>`});
+    g+=`<rect class="hit" data-i="${i}" x="0" y="${i*band}" width="${W}" height="${band}" fill="transparent"/>`});
+  chart.querySelector("svg")?.remove();chart.insertAdjacentHTML("afterbegin",g+"</svg>");
+  chart.querySelectorAll(".hit").forEach(h=>{
+    h.addEventListener("mousemove",e=>{const r=rows[+h.dataset.i],p=pct(r[1],r[2]),b=chart.getBoundingClientRect();
+      tip.innerHTML=`<b>${esc(r[0])}</b><br>2566: ${fmt(r[1],d)}<br>2567: ${fmt(r[2],d)}<br>ผลต่าง: ${pf(p)}`;
+      tip.hidden=false;tip.style.left=Math.min(Math.max(e.clientX-b.left,110),b.width-110)+"px";tip.style.top=(e.clientY-b.top-8)+"px"});
+    h.addEventListener("mouseleave",()=>tip.hidden=true)});
+  tbl.innerHTML=`<thead><tr><th>รายการ (${esc(s.k)})</th><th>2566</th><th>2567</th><th>ผลต่าง(%)</th></tr></thead><tbody>`+
+    rows.map((r,i)=>{const p=pct(r[1],r[2]);return `<tr class="${i===rows.length-1?"sum":""}"><td>${esc(r[0])}</td><td class="m num">${fmt(r[1],d)}</td><td class="m num">${fmt(r[2],d)}</td><td class="m num ${p<0?"down":""}">${pf(p)}</td></tr>`}).join("")+"</tbody>";
+}
+DATA.forEach((s,i)=>{const b=document.createElement("button");b.textContent=s.k;b.id="tab"+i;b.setAttribute("role","tab");
+  b.setAttribute("aria-selected",i===0);b.onclick=()=>{cur=i;tabs.querySelectorAll("button").forEach((x,j)=>x.setAttribute("aria-selected",j===i));draw()};tabs.appendChild(b)});
+draw();
+let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(draw,120)});
+
+const mb=document.getElementById("menuBtn"),nav=document.getElementById("nav");
+mb.onclick=()=>{const o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+nav.querySelectorAll("a").forEach(a=>a.onclick=()=>{nav.classList.remove("open");mb.setAttribute("aria-expanded",false)});
+</script>
+
+</body>
+</html>
